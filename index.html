@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>osu! Snap Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>osu! Snap Calculator</h1>
+        <div class="input-group">
+            <label for="desired-snap">Desired Snap (1/x):</label>
+            <input type="number" id="desired-snap" value="1" min="1">
+        </div>
+
+        <div class="input-group">
+            <label for="base-snap">Base Snap (1/x):</label>
+            <select id="base-snap">
+                <option value="1/1">1/1</option>
+                <option value="1/2">1/2</option>
+                <option value="1/3">1/3</option>
+                <option value="1/4">1/4</option>
+                <option value="1/5">1/5</option>
+                <option value="1/6">1/6</option>
+                <option value="1/7">1/7</option>
+                <option value="1/8">1/8</option>
+                <option value="1/9">1/9</option>
+                <option value="1/12">1/12</option>
+                <option value="1/16">1/16</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label for="bpm">BPM:</label>
+            <input type="number" id="bpm" placeholder="Enter BPM">
+        </div>
+
+        <button onclick="calculateSnap()">Calculate</button>
+
+        <div class="result">
+            <h2>Result: <span id="result"></span> BPM</h2>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
