@@ -1,11 +1,13 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
+    color: #000;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 .container {
@@ -14,8 +16,9 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 500px; 
+    max-width: 400px;
     box-sizing: border-box;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 h1 {
@@ -37,7 +40,7 @@ input, select {
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 button {
@@ -63,10 +66,53 @@ button:hover {
     color: #007bff;
 }
 
-/* Responsif untuk layar yang lebih kecil */
-@media (max-width: 768px) {
-    .container {
-        padding: 15px;
-        max-width: 100%;
-    }
+.theme-toggle-btn {
+    position: fixed; /* Tetap di satu posisi */
+    bottom: 20px;    /* 20px dari bawah layar */
+    right: 20px;     /* 20px dari kanan layar */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;  /* Membuat tombol menjadi bulat */
+    width: 50px;         /* Tetapkan lebar tetap */
+    height: 50px;        /* Tetapkan tinggi tetap */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.5s ease;
+}
+
+.theme-toggle-btn:hover {
+    background-color: #0056b3;
+}
+
+.theme-toggle-btn i {
+    pointer-events: none; 
+    font-size: 24px;       
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode .container {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode button {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+body.dark-mode .theme-toggle-btn i {
+    content: '\f185'; 
+}
+
+body.dark-mode .theme-toggle-btn {
+    background-color: #0056b3;
 }
