@@ -13,7 +13,7 @@
         <h1>osu! Snap Calculator</h1>
         <div class="input-group">
             <label for="desired-snap">Desired Snap (1/x):</label>
-            <input type="number" id="desired-snap" value="1" min="1">
+            <input type="number" id="desired-snap" value="1" min="1" required>
         </div>
 
         <div class="input-group">
@@ -35,10 +35,10 @@
 
         <div class="input-group">
             <label for="bpm">BPM:</label>
-            <input type="number" id="bpm" placeholder="Enter BPM">
+            <input type="number" id="bpm" placeholder="Enter BPM" required>
         </div>
 
-        <button onclick="calculateSnap()">Calculate</button>
+        <button type="submit" onclick="calculateSnap()">Calculate</button>
 
         <div class="result">
             <h2>Result: <span id="result"></span> BPM</h2>
