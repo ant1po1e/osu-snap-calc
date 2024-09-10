@@ -1,4 +1,3 @@
-// Fungsi untuk kalkulasi snap BPM
 function calculate() {
     const desiredSnap = document.getElementById('desired-snap').value;
     const baseSnap = document.getElementById('base-snap').value;
@@ -12,7 +11,6 @@ function calculate() {
     }
 }
 
-// Cek preferensi pengguna sebelumnya dari localStorage
 document.addEventListener('DOMContentLoaded', () => {
     const theme = localStorage.getItem('theme') || 'light';
     if (theme === 'dark') {
